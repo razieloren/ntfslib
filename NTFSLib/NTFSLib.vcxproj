@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Attribute\AttributesListAttribute.h" />
+    <ClInclude Include="Attribute\Base\AttributeRecord.h" />
+    <ClInclude Include="Attribute\Base\NonResidentAttribute.h" />
+    <ClInclude Include="Attribute\DataStreamAttribute.h" />
+    <ClInclude Include="Attribute\FileNameAttribute.h" />
+    <ClInclude Include="Attribute\Base\CommonAttribute.h" />
+    <ClInclude Include="Attribute\Base\ResidentAttribute.h" />
+    <ClInclude Include="Misc\Serializer.h" />
+    <ClInclude Include="Misc\Win32\Event.h" />
+    <ClInclude Include="Attribute\IndexAllocationAttribute.h" />
+    <ClInclude Include="Misc\Win32\VolumeFile.h" />
+    <ClInclude Include="Misc\IndexEntry.h" />
+    <ClInclude Include="Attribute\IndexRootAttribute.h" />
+    <ClInclude Include="Attribute\StandardInformationAttribute.h" />
+    <ClInclude Include="Misc\IndexHeader.h" />
+    <ClInclude Include="Misc\StringResource.h" />
+    <ClInclude Include="NTFSLib.h" />
+    <ClInclude Include="NTFSOutStream.h" />
+    <ClInclude Include="NTFSParser.h" />
+    <ClInclude Include="Record\MFTRecord.h" />
+    <ClInclude Include="Record\IndexRecord.h" />
+    <ClInclude Include="NTFSUtils.h" />
+    <ClInclude Include="Attribute\VolumeInformationAttribute.h" />
+    <ClInclude Include="Attribute\VolumeNameAttribute.h" />
+    <ClInclude Include="Types\ChangeJournalTypes.h" />
+    <ClInclude Include="Misc\Defs.h" />
+    <ClInclude Include="Misc\NTFSLibError.h" />
+    <ClInclude Include="Types\NTFSTypes.h" />
+    <ClInclude Include="NTFSVolume.h" />
+    <ClInclude Include="Misc\Win32\Win32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Attribute\AttributesListAttribute.cpp" />
+    <ClCompile Include="Attribute\Base\AttributeRecord.cpp" />
+    <ClCompile Include="Attribute\Base\NonResidentAttribute.cpp" />
+    <ClCompile Include="Attribute\Base\ResidentAttribute.cpp" />
+    <ClCompile Include="Attribute\DataStreamAttribute.cpp" />
+    <ClCompile Include="Attribute\FileNameAttribute.cpp" />
+    <ClCompile Include="Attribute\Base\CommonAttribute.cpp" />
+    <ClCompile Include="Attribute\IndexAllocationAttribute.cpp" />
+    <ClCompile Include="Misc\Serializer.cpp" />
+    <ClCompile Include="Misc\Win32\Event.cpp" />
+    <ClCompile Include="Misc\Win32\VolumeFile.cpp" />
+    <ClCompile Include="Misc\IndexEntry.cpp" />
+    <ClCompile Include="Attribute\IndexRootAttribute.cpp" />
+    <ClCompile Include="Attribute\StandardInformationAttribute.cpp" />
+    <ClCompile Include="Misc\IndexHeader.cpp" />
+    <ClCompile Include="Misc\StringResource.cpp" />
+    <ClCompile Include="NTFSOutStream.cpp" />
+    <ClCompile Include="NTFSParser.cpp" />
+    <ClCompile Include="Record\MFTRecord.cpp" />
+    <ClCompile Include="Record\IndexRecord.cpp" />
+    <ClCompile Include="NTFSUtils.cpp" />
+    <ClCompile Include="Attribute\VolumeInformationAttribute.cpp" />
+    <ClCompile Include="Attribute\VolumeNameAttribute.cpp" />
+    <ClCompile Include="Misc\NTFSLibError.cpp" />
+    <ClCompile Include="NTFSVolume.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Record\MFTRecord.inl" />
+    <None Include="NTFSUtils.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AF2B4D92-F973-479D-AA8A-E2B85B28CCB5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NTFSLib</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>NTFSLib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Output\$(ProjectName)\Binaries\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(ProjectName)\Logs\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Output\$(ProjectName)\Binaries\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(ProjectName)\Logs\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Output\$(ProjectName)\Binaries\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(ProjectName)\Logs\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Output\$(ProjectName)\Binaries\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(ProjectName)\Logs\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>python "$(SolutionDir)Scripts\PostBuild\CreateProductionFolder.py" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Creates a folder with the newest headers and .lib binaries.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>python "$(SolutionDir)Scripts\PostBuild\CreateProductionFolder.py" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Creates a folder with the newest headers and .lib binaries.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>python "$(SolutionDir)Scripts\PostBuild\CreateProductionFolder.py" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Creates a folder with the newest headers and .lib binaries.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>python "$(SolutionDir)Scripts\PostBuild\CreateProductionFolder.py" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Creates a folder with the newest headers and .lib binaries.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
